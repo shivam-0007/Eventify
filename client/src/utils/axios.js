@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api=axios.create({
-    baseURL: "http://localhost:5001/api",
+    baseURL: "https://eventify-server-y3cd.onrender.com",
     headers: {
         "Content-Type": "application/json",
     },
