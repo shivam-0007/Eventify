@@ -7,7 +7,9 @@ const { sendOTPEmail } = require('../utils/email');
 const generateToken = (id, role) => {
     return jwt.sign({ id, role }, process.env.JWT_SECRET, { expiresIn: '30d' });
 };
-
+const generateOTP = () => {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+};
 //Register a new user
 exports.registerUser = async (req, res) => {
     const { name, email, password } = req.body;
